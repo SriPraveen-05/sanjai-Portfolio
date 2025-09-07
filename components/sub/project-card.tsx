@@ -4,7 +4,7 @@ import Link from "next/link";
 type ProjectCardProps = {
   src: string;
   title: string;
-  link: string;
+  link?: string;
 };
 
 export const ProjectCard = ({
@@ -14,7 +14,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <Link
-      href={link}
+      href={link ?? "#"}
       target="_blank"
       rel="noreferrer noopener"
       className="w-full relative overflow-hidden rounded-lg shadow-lg hover:scale-[1.06] transition  ring-blue-500 border border-[#2A0E61]"
